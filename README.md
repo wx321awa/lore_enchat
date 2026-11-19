@@ -1,5 +1,14 @@
 # lore_enchant · 词条版 (v1.3.0)
 
+## 下载
+
+**最新版：[v1.3.0](https://github.com/wx321awa/lore_enchat/releases/latest)** —— `lore_enchantv1.3.0.7z`（约 55 KB）
+
+> 解压后把 `lore_enchant` 整个文件夹放进服务器 `plugins/` 目录，重启服务器即加载。
+> 环境需要 LiteLoaderBDS + LegacyScriptEngine（QuickJS 引擎）。
+
+全部历史版本见 [Releases](https://github.com/wx321awa/lore_enchat/releases)。
+
 ## 关于作者
 
 作者：xxhh.
