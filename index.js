@@ -30,7 +30,7 @@ const gear = require("plugins/lore_enchant/src/gear");
 const loreedit = require("plugins/lore_enchant/src/loreedit");
 const { roman, byLevel, slotMatches, fmtPos } = require("plugins/lore_enchant/src/util");
 
-const VERSION = [1, 8, 5];
+const VERSION = [1, 2, 0];
 const BRAND = 'XiYing定制版';
 
 try {
