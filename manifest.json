@@ -3,11 +3,11 @@
     "name": "lore_enchant",
     "type": "lse-quickjs",
     "version": "1.8.5",
-    "author": "swan3146",
+    "author": "xxhh.",
     "description": "按物品 Lore 触发战斗词条（XiYing定制版 · 雷神单测版：只保留雷神，用来验证整条链路）",
     "extraInfo": {
         "License": "Apache-2.0",
-        "Maintainer": "swan3146",
+        "Maintainer": "xxhh.",
         "Edition": "XiYing定制版 · 雷神单测版"
     },
     "dependencies": [

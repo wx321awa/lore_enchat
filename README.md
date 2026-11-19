@@ -1,5 +1,11 @@
 ﻿# lore_enchant · 词条版 (v1.2.0)
 
+## 关于作者
+
+作者：xxhh.
+
+这是一个按物品 Lore 触发战斗词条的 LiteLoaderBDS（LSE QuickJS）插件。
+
 **目前 23 个词条：14 个武器 + 9 个护甲**：
 
 ```

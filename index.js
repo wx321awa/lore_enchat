@@ -35,7 +35,7 @@ const BRAND = 'XiYing定制版';
 
 try {
     ll.registerPlugin('lore_enchant', '按物品Lore触发战斗词条（' + BRAND + ' · 雷神单测版）', VERSION, {
-        author: 'swan3146',
+        author: 'xxhh.',
         License: 'Apache-2.0',
     });
 } catch (e) {
