@@ -716,15 +716,33 @@ class Runtime {
         this.stats.hurt++;
         const cfg = this.cfg();
         const armor = gear.armorItems(player);
+        // 远程伤害的 source 经常是弹射物（箭/三叉戟）：直接把凋零挂到箭上等于白给，
+        // 所以先换回真正的攻击者；查不到才退回原对象。
+        const attacker = this.resolveAttacker(source);
         let cancel = false;
-        const names = ['头盔', '胸甲', '护腿', '靴子'];
         for (let i = 0; i < armor.length; i++) {
             const item = armor[i];
             if (item == null) continue;
             const enchants = gear.enchantsOf(item, cfg);
-            if (this.dispatch('hurt', player, source, item, enchants, damage, cause, api)) cancel = true;
+            if (this.dispatch('hurt', player, attacker, item, enchants, damage, cause, api)) cancel = true;
         }
         return cancel;
+    }
+
+    /**
+     * 把「伤害来源」换成真正的攻击者。
+     * onProjectileCreated 记过射手 → 用射手；否则原样返回（近战/mob 直接就是实体）。
+     */
+    resolveAttacker(source) {
+        if (source == null) return null;
+        try {
+            const key = this.shooterOf(source);
+            if (key != null) {
+                const p = this.findPlayerByKey(key);
+                if (p != null) return p;
+            }
+        } catch (e) { }
+        return source;
     }
 
     /** 击杀：source 是玩家 */
