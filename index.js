@@ -1,12 +1,12 @@
-﻿"use strict";
+"use strict";
 /**
- * lore_enchant —— **雷神单测版**（v0.2.0）
+ * lore_enchant —— **词条版**（v1.3.0）
  *
- * 只保留「雷神」一个词条，用来确认整条链路：
+ * 23 个词条（武器 14 + 护甲 9），全部由物品 lore 触发：
  *
  *     lore 写成「雷神III」 → 手持武器命中 → 概率判定 → 在目标位置召唤闪电
  *
- * 和上一版的区别（这是重点）：
+ * 近战命中的接线方式（这是重点）：
  *   近战命中改成监听 **onAttackEntity(attacker, victim)**，不再依赖 onMobHurt 的
  *   第 2 个参数。线上日志证明：onAttackEntity 一定给到玩家对象，而某些 LSE 版本的
  *   onMobHurt 传进来的 source 不是玩家对象（has getHand == false），导致近战分支永远
@@ -30,11 +30,11 @@ const gear = require("plugins/lore_enchant/src/gear");
 const loreedit = require("plugins/lore_enchant/src/loreedit");
 const { roman, byLevel, slotMatches, fmtPos } = require("plugins/lore_enchant/src/util");
 
-const VERSION = [1, 2, 0];
+const VERSION = [1, 3, 0];
 const BRAND = 'XiYing定制版';
 
 try {
-    ll.registerPlugin('lore_enchant', '按物品Lore触发战斗词条（' + BRAND + ' · 雷神单测版）', VERSION, {
+    ll.registerPlugin('lore_enchant', '按物品Lore触发战斗词条（' + BRAND + ' · 词条版）', VERSION, {
         author: 'xxhh.',
         License: 'Apache-2.0',
     });
@@ -640,7 +640,7 @@ function statusLines(player) {
 function diagLines(player) {
     const cfg = Config.get();
     const out = [];
-    out.push('§l§e诊断 §8v' + VERSION.join('.') + '（雷神单测版）');
+    out.push('§l§e诊断 §8v' + VERSION.join('.') + '（词条版）');
     out.push('§7enabled=' + cfg.enabled + ' require_level=' + cfg.require_level
         + ' marker=' + JSON.stringify(cfg.require_marker));
     out.push('§7词条数=' + Enchants.LIST.length + ' 关键词数=' + Enchants.KEYS.length);
@@ -769,7 +769,7 @@ safeListen('onProjectileCreated', (shooter, entity) => {
 });
 
 safeListen('onServerStarted', () => {
-    log('§b[lore_enchant] ' + BRAND + ' v' + VERSION.join('.') + ' §7已启用（雷神单测版）§8(/le 看词条)');
+    log('§b[lore_enchant] ' + BRAND + ' v' + VERSION.join('.') + ' §7已启用（词条版）§8(/le 看词条)');
     if (Enchants.hasPassive()) rt.start();
 });
 

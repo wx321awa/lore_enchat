@@ -1,14 +1,14 @@
-﻿{
+{
     "entry": "index.js",
     "name": "lore_enchant",
     "type": "lse-quickjs",
-    "version": "1.2.0",
+    "version": "1.3.0",
     "author": "xxhh.",
-    "description": "按物品 Lore 触发战斗词条（XiYing定制版 · 雷神单测版：只保留雷神，用来验证整条链路）",
+    "description": "按物品 Lore 触发战斗词条（XiYing定制版 · 词条版：23 个武器/护甲词条）",
     "extraInfo": {
         "License": "Apache-2.0",
         "Maintainer": "xxhh.",
-        "Edition": "XiYing定制版 · 雷神单测版"
+        "Edition": "XiYing定制版 · 词条版"
     },
     "dependencies": [
         {

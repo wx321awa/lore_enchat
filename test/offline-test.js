@@ -1,6 +1,6 @@
 ﻿"use strict";
 /**
- * 离线自测（雷神单测版，不需要 BDS，只要 Node 18+）：
+ * 离线自测（词条版，不需要 BDS，只要 Node 18+）：
  *
  *     node test/offline-test.js
  *

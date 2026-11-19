@@ -1,6 +1,6 @@
 ﻿"use strict";
 /**
- * 冒烟测试（雷神单测版）：假装成一个 LSE 环境，把 index.js 真跑一遍。
+ * 冒烟测试（词条版）：假装成一个 LSE 环境，把 index.js 真跑一遍。
  *
  *     node test/smoke-index.js
  *
