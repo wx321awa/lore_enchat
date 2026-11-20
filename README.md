@@ -5,7 +5,7 @@
 **最新版：[v1.3.0](https://github.com/wx321awa/lore_enchat/releases/latest)** —— `lore_enchantv1.3.0.7z`（约 55 KB）
 
 > 解压后把 `lore_enchant` 整个文件夹放进服务器 `plugins/` 目录，重启服务器即加载。
-> 环境需要 LiteLoaderBDS + LegacyScriptEngine（QuickJS 引擎）。
+> 环境需要 LeviLamina + LegacyScriptEngine（QuickJS 引擎，装法：`lip install LegacyScriptEngine#quickjs`）。
 
 全部历史版本见 [Releases](https://github.com/wx321awa/lore_enchat/releases)。
 
@@ -13,7 +13,7 @@
 
 作者：xxhh.
 
-这是一个按物品 Lore 触发战斗词条的 LiteLoaderBDS（LSE QuickJS）插件。
+这是一个按物品 Lore 触发战斗词条的 LeviLamina（LSE QuickJS）插件。
 
 **目前 23 个词条：14 个武器 + 9 个护甲**：
 
